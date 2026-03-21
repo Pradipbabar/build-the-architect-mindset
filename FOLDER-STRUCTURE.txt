@@ -1,0 +1,21 @@
+  adrs
+  books
+  case-studies
+  concepts
+  courses
+  drafts
+  patterns
+  phase-1
+  phase-2
+  portfolio
+  published
+  work-projects
+ architecture-docs
+ blog
+ journal
+ notes
+ projects
+ resources
+ roadmap
+ system-designs
+.
