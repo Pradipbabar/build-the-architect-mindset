@@ -11,7 +11,7 @@ Everything has been set up for you. This document tells you exactly where to sta
 Your complete learning environment is ready:
 
 ### 📁 Main Folder
-Location: `/Users/pradip.babar/Learnings/learning-architect/`
+Location: `learning-architect/`
 
 ### 📋 Key Documents Created
 - ✅ **QUICK-START.md** - Overview of everything
@@ -96,7 +96,7 @@ Fill this out honestly. If you can't commit, stop and reconsider.
 ---
 
 ### Step 4: Follow WEEK-1-START-HERE.md (Rest of Week 1)
-📄 Open: `WEEK-1-START-HERE.md`
+📄 Open: `Year-2026/Month-March/Weeks/Week-23-to29/WEEK-1-START-HERE.md`
 
 This tells you exactly what to do each day of Week 1.
 
