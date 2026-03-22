@@ -399,6 +399,35 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 
 ---
 
+## Principal Engineer Extensions - Phase 1
+
+### System-Level Decision Making
+- Choose libraries and frameworks based on long-term maintainability
+- Consider operational complexity in technology selections
+- Design with debugging and monitoring in mind from the start
+
+### Trade-Off Analysis
+- Balance development velocity vs. system reliability
+- Evaluate memory/CPU efficiency in algorithm choices
+- Consider security implications of dependencies
+
+### Long-Term Technical Vision
+- Structure code for future scalability and modification
+- Design APIs that can evolve without breaking changes
+- Choose patterns that support business growth
+
+### Cross-Team Impact Awareness
+- Design services with clear interfaces and contracts
+- Consider operational monitoring needs
+- Think about integration with existing systems
+
+### Real-World Scenario Exercises
+1. **Prototype to Production Evolution**: Transform a simple tool into a production service with proper error handling, configuration, and logging
+2. **Zero-Downtime Migration**: Design a database schema change that can be deployed without service interruption
+3. **API Versioning Strategy**: Modify an API to add features while maintaining backward compatibility
+
+---
+
 ## If You Can't Check All Boxes Above
 
 **DO NOT move to Phase 2.** Going forward without this foundation will waste your time.

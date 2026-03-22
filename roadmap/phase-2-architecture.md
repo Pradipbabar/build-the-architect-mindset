@@ -9,7 +9,7 @@
 
 ## Overview
 
-Now that you can build systems, you'll learn to design them. This phase focuses on architectural thinking, patterns, and system design skills.
+Now that you can build systems, you'll learn to design them. This phase focuses on architectural thinking, patterns, system design skills, and cloud platform mastery.
 
 ---
 
@@ -126,6 +126,9 @@ Now that you can build systems, you'll learn to design them. This phase focuses 
 - [ ] Know service mesh concepts
 - [ ] Design for security (zero trust)
 - [ ] Understand cost optimization
+- [ ] Master cloud platform services (AWS/Azure/GCP)
+- [ ] Design cloud-native architectures
+- [ ] Implement Infrastructure as Code at scale
 
 ### Resources
 
@@ -137,6 +140,12 @@ Now that you can build systems, you'll learn to design them. This phase focuses 
 - [ ] CNCF Landscape - https://landscape.cncf.io/
 - [ ] AWS Well-Architected Framework - https://aws.amazon.com/architecture/well-architected/
 - [ ] Backstage docs - https://backstage.io/
+- [ ] AWS Cloud Best Practices - https://aws.amazon.com/architecture/
+- [ ] Terraform Documentation - https://www.terraform.io/docs/
+
+#### Courses
+- [ ] AWS Solutions Architect Associate (if budget allows)
+- [ ] Terraform Associate Certification prep
 
 ### Projects
 
@@ -231,6 +240,27 @@ Now that you can build systems, you'll learn to design them. This phase focuses 
 
 ---
 
+#### Project 6: Cloud Platform Deep Dive (AWS/Azure/GCP)
+**Requirements**:
+- Choose one major cloud platform (AWS recommended for broad adoption)
+- Master core services: compute, storage, networking, databases, security
+- Understand managed services vs self-managed trade-offs
+- Learn Infrastructure as Code (CloudFormation/Terraform)
+- Design for high availability and disaster recovery
+- Implement cost monitoring and optimization
+
+**Deliverables**:
+- Cloud architecture designs for common patterns
+- IaC templates for production deployments
+- Cost optimization strategies
+- Multi-region/multi-AZ architectures
+- Security best practices implementation
+
+**Status**: Not Started
+**GitHub**: (add link)
+
+---
+
 ### Success Criteria
 
 - [ ] Can design platform for 50+ engineers
@@ -238,6 +268,7 @@ Now that you can build systems, you'll learn to design them. This phase focuses 
 - [ ] Can make build vs buy decisions with justification
 - [ ] Know zero trust security principles
 - [ ] Can design for cost efficiency
+- [ ] **Master core cloud platform services and patterns**
 - [ ] Completed all platform projects
 - [ ] Minimum 250 hours logged
 
@@ -476,6 +507,62 @@ For EACH problem below:
 - [ ] Consider business context in technical decisions
 - [ ] Comfortable with ambiguity
 - [ ] Know what you don't know
+
+---
+
+## Principal Engineer Extensions - Phase 2
+
+### System-Level Decision Making
+- Evaluate build vs. buy vs. extend decisions for platform components
+- Choose patterns based on business domain characteristics
+- Consider organizational structure impact on system design
+
+### Trade-Off Analysis
+- Cost-benefit analysis for scalability approaches
+- Performance vs. complexity in distributed systems
+- Consistency vs. availability in business contexts
+
+### Long-Term Technical Vision
+- Design for evolutionary architecture with migration paths
+- Create systems adaptable to changing business requirements
+- Plan technology refresh and modernization strategies
+
+### Cross-Team Impact Awareness
+- Design APIs minimizing team coupling
+- Consider shared infrastructure costs
+- Plan cross-team incident response
+
+### Real-World Scenario Exercises
+1. **10k to 10M User Scaling**: Evolve a notification system with database sharding, caching, and service decomposition
+2. **Legacy Migration**: Plan monolithic to microservices migration with data migration and feature flags
+3. **Multi-Region Design**: Architect global e-commerce with consistency, latency, and failover
+
+### Architecture Depth Enhancements
+
+#### Evolutionary Architecture
+- Design incremental evolution without rewrites
+- Implement feature toggles and dark launches
+- Create strategies for breaking changes
+
+#### System Boundaries and Domain Ownership
+- Define bounded contexts and domain boundaries
+- Design APIs reflecting business domain language
+- Establish clear team ownership boundaries
+
+#### Failure Design (Graceful Degradation, Resiliency)
+- Implement circuit breakers and bulkheads
+- Design fallback mechanisms for degraded states
+- Create chaos engineering experiments
+
+#### Observability as First-Class Concern
+- Build comprehensive logging, metrics, tracing
+- Design health checks and alerting
+- Create operational visibility dashboards
+
+#### Build vs Buy vs Extend Frameworks
+- Evaluate total cost of ownership
+- Assess strategic vs. commodity components
+- Consider team capabilities and learning
 
 ---
 

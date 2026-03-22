@@ -6,7 +6,9 @@
 
 ## What Is This?
 
-This is your complete learning structure to go from **DevOps Engineer to Architect** in 3-5 years.
+This is your complete learning structure to go from **DevOps Engineer to Principal Engineer with Architect Mindset** in 3-5 years.
+
+Enhanced with leadership, strategic thinking, and high-impact decision-making capabilities.
 
 Everything you need is organized in this folder.
 

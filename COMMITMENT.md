@@ -2,11 +2,13 @@
 
 **Date**: March 21, 2026
 
+This commitment includes leadership, strategic thinking, and high-impact decision-making capabilities for Principal Engineer roles.
+
 ---
 
 ## My Goal
 
-I want to become a **Platform/Solution Architect** who can design reliable, scalable, secure, and modern systems with a solid understanding of current and future market needs.
+I want to become a **Principal Engineer with Architect Mindset** who can design reliable, scalable, secure, and modern systems while leading technical strategy, making high-impact decisions, and driving engineering excellence across teams.
 
 I understand this will take **3-5 years minimum** with focused, disciplined learning.
 
@@ -23,11 +25,13 @@ I understand this will take **3-5 years minimum** with focused, disciplined lear
 - Average at many things (5/10), expert at nothing
 
 ### Where I Want to Be
-- Platform/Solution Architect
-- Designing systems end-to-end
-- Making informed trade-off decisions
-- Leading technical discussions
-- Influencing architecture across teams
+- Principal Engineer / Platform Architect
+- Designing systems end-to-end with strategic vision
+- Making informed trade-off decisions that balance business and technical needs
+- Leading technical discussions and driving consensus
+- Influencing architecture and strategy across teams
+- Owning ambiguity and defining technical direction
+- Mentoring and raising the engineering bar
 
 ### The Gap
 The gap is **massive**. I need to build:
@@ -35,7 +39,16 @@ The gap is **massive**. I need to build:
 2. System design & architecture knowledge
 3. Independent decision-making experience
 4. Communication & documentation skills
-5. Business acumen
+5. Business acumen and strategic thinking
+6. Leadership and influence capabilities
+7. Strategic decision-making frameworks
+8. Cross-team impact awareness
+9. Business strategy and product management skills
+10. Team leadership and management capabilities
+11. Innovation and technology strategy expertise
+12. Ethics and responsible technology practices
+13. Career development and personal branding
+14. Work-life balance and sustainability
 
 ---
 
@@ -149,6 +162,57 @@ ___
 
 ---
 
+### 6. Leadership & Strategic Thinking
+**Question**: Are you willing to develop leadership capabilities and strategic thinking?
+
+**My Answer**: ☐ YES  ☐ NO
+
+**My Commitment**:
+I commit to **developing leadership and strategic thinking capabilities** required for Principal Engineer roles. I will:
+- Practice owning ambiguity and defining technical direction
+- Learn to balance business goals with engineering decisions
+- Develop skills in influencing without formal authority
+- Build mentorship and team development capabilities
+- Study real-world scenarios and decision-making frameworks
+
+**Current status**: Need to develop these skills
+
+**Why this is critical**:
+Principal Engineers drive technical strategy, make high-impact decisions, and lead across team boundaries. These capabilities distinguish senior engineers from Principal Engineers.
+
+**How I will develop these skills**:
+___
+
+---
+
+### 7. Metrics of Growth Tracking
+**Question**: Will you commit to tracking and working towards measurable growth metrics?
+
+**My Answer**: ☐ YES  ☐ NO
+
+**My Commitment**:
+I commit to **tracking and actively working towards the Metrics of Growth** that define Principal Engineer success. I will:
+- **Individual Contributor Metrics**: Focus on architectural soundness, problem definition, and team enablement
+- **System-Level Metrics**: Design for 10x scalability, measurable reliability, and cost-effective solutions
+- **Leadership Metrics**: Build influence across teams, mentor others, and implement technical vision
+- **Business Impact Metrics**: Make decisions that improve ROI, reduce risk, and create competitive advantage
+- Track these metrics quarterly and adjust my development focus accordingly
+- Document specific examples of growth in each area
+
+**Current status**: Need to establish baseline measurements
+
+**Why this is critical**:
+Metrics provide objective measures of progress beyond "experience years" and ensure I'm developing the right capabilities for Principal Engineer impact.
+
+**How I will track these metrics**:
+- Quarterly self-assessment against each metric category
+- Document specific examples and measurements
+- Seek feedback from mentors on my growth in these areas
+- Adjust learning priorities based on metric gaps
+___
+
+---
+
 ## What I Must Accept
 
 I have read and accept the following truths:
@@ -163,6 +227,15 @@ I have read and accept the following truths:
 - [ ] **No one will do this for me** — self-directed learning is hard
 - [ ] **I will make mistakes and fail** — this is part of learning
 - [ ] **There are no shortcuts** — the only way is through focused, disciplined work
+- [ ] Leadership and influence are core requirements — I must develop these capabilities
+- [ ] Strategic thinking and high-impact decisions are non-negotiable — I must learn these frameworks
+- [ ] Metrics of growth tracking is essential — I must measure and work towards objective success indicators
+- [ ] Business strategy and product management are critical — I must understand how business drives technology
+- [ ] Team leadership and management are essential — I must learn to build and lead high-performing teams
+- [ ] Innovation and technology strategy are key — I must drive technological advancement
+- [ ] Ethics and responsible technology are mandatory — I must consider broader societal impact
+- [ ] Career development and personal branding are important — I must build my professional presence
+- [ ] Work-life balance and sustainability are crucial — I must maintain long-term career health
 
 ---
 
@@ -263,6 +336,14 @@ I will know I'm successful when:
 - [ ] Presented to senior leadership
 - [ ] Comfortable with communication/documentation
 - [ ] Ready to interview for architect roles
+- [ ] Demonstrated leadership in technical strategy
+- [ ] Influenced decisions across team boundaries
+- [ ] Developed mentorship and team growth capabilities
+- [ ] Can align technical decisions with business strategy
+- [ ] Built and led cross-functional initiatives
+- [ ] Developed professional network and personal brand
+- [ ] Consistently practice ethical technology decisions
+- [ ] Maintain healthy work-life balance
 
 ---
 
@@ -290,16 +371,16 @@ I will know I'm successful when:
 
 ## The Question I Must Answer
 
-**Do I want to be an architect, or do I want to want to be an architect?**
+**Do I want to be a Principal Engineer with Architect Mindset, or do I want to want to be one?**
 
-There's a difference. Many people like the IDEA of being an architect (prestige, salary, title) but don't actually want to do the WORK (communication, documentation, stakeholder management, being wrong publicly).
+There's a difference. Many people like the IDEA of being a Principal Engineer (technical leadership, impact, compensation) but don't actually want to do the WORK (strategic thinking, cross-team influence, mentorship, owning ambiguity).
 
 **My honest answer**:
 
 
 
 
-If I want the title but not the work, I should aim for **Principal Engineer** instead (same level, more coding, less communication).
+If I want the title but not the work, I should reconsider my goals and timeline.
 
 ---
 
@@ -314,12 +395,28 @@ I understand:
 - The time commitment required (3-5 years minimum)
 - The challenges I will face
 - That there are no shortcuts
+- The leadership and strategic capabilities required
+- The importance of tracking metrics of growth
+- The need for business strategy and product management skills
+- The importance of team leadership and management
+- The value of innovation and technology strategy
+- The necessity of ethical technology practices
+- The importance of career development and personal branding
+- The need for work-life balance and sustainability
 
 I commit to:
 - 10 focused hours per week for 3-5 years
 - Sequential, deep learning (no parallel learning)
 - Building without AI crutch
 - Improving communication and documentation
+- Developing leadership and strategic thinking
+- Tracking and working towards metrics of growth
+- Learning business strategy and product management
+- Developing team leadership and management skills
+- Driving innovation and technology strategy
+- Practicing ethical technology decisions
+- Building career development and personal branding
+- Maintaining work-life balance and sustainability
 - Tracking progress honestly
 - Finishing what I start
 

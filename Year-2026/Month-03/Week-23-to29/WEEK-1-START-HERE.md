@@ -1,6 +1,8 @@
-# Week 1: Start Here - Your Action Plan
+# Week 1: Start Here - Your Principal Engineer Journey Action Plan
 
-**Welcome to Day 1 of your architect journey!**
+**Welcome to Day 1 of your Principal Engineer journey with Architect Mindset!**
+
+This roadmap now includes leadership and strategic capabilities for Principal Engineer roles.
 
 This document tells you exactly what to do in Week 1. Follow this step by step.
 

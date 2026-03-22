@@ -1,6 +1,8 @@
 # 🚀 START HERE FIRST
 
-**Welcome to your Architect Learning Journey!**
+**Welcome to your Principal Engineer Learning Journey with Architect Mindset!**
+
+This roadmap includes leadership, strategic thinking, and high-impact decision-making capabilities required for Principal Engineer roles.
 
 Everything has been set up for you. This document tells you exactly where to start.
 
