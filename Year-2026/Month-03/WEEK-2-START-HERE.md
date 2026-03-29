@@ -54,7 +54,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ## Detailed Daily Plan
 
-### Monday, March 28 (Target: 2 hours)
+### Monday, March 30 (Target: 2 hours)
 
 **Focus: TGPL Chapter 1 — A Tutorial**
 
@@ -75,7 +75,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ---
 
-### Tuesday, March 29 (Target: 1.5 hours)
+### Tuesday, March 31 (Target: 1.5 hours)
 
 **Focus: Finish Gophercises #1 + Start #2**
 
@@ -92,7 +92,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ---
 
-### Wednesday, March 30 (Target: 2 hours)
+### Wednesday, April 1 (Target: 2 hours)
 
 **Focus: TGPL Chapter 2 — Program Structure**
 
@@ -111,7 +111,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ---
 
-### Thursday, March 31 (Target: 1.5 hours)
+### Thursday, April 2 (Target: 1.5 hours)
 
 **Focus: Write Tests + Explore Go Toolchain**
 
@@ -130,7 +130,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ---
 
-### Friday, April 1 (Target: 1 hour)
+### Friday, April 3 (Target: 1 hour)
 
 **Focus: Community + Reflection**
 
@@ -148,7 +148,7 @@ Week 2 contributes directly to the first three. Every hour this week counts towa
 
 ---
 
-### Saturday, April 2 (Target: 1.5 hours)
+### Saturday, April 4 (Target: 1.5 hours)
 
 **Focus: Build Something Small on Your Own**
 
@@ -178,7 +178,7 @@ Choose ONE of these mini-projects to build with no guidance:
 
 ---
 
-### Sunday, April 3 (Target: 0.5 hours)
+### Sunday, April 5 (Target: 0.5 hours)
 
 **Focus: Weekly Review + Plan Week 3**
 

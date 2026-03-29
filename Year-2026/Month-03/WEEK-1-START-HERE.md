@@ -131,14 +131,14 @@ If budget is an issue, start with:
 ## Day 3: Baseline Assessment (1.5 hours)
 
 ### Complete Tour of Go (Module 1 only)
-- [ ] Go to: https://go.dev/tour/
-- [ ] Complete "Basics" section only
-- [ ] Don't worry about understanding everything
-- [ ] Note what confuses you
+- [x] Go to: https://go.dev/tour/
+- [x] Complete "Basics" section only
+- [x] Don't worry about understanding everything
+- [x] Note what confuses you
 
 ### Document Your Current Level
-- [ ] Create file: `notes/concepts/go-baseline-assessment.md`
-- [ ] Write down:
+- [x] Create file: `notes/concepts/go-baseline-assessment.md`
+- [x] Write down:
   - What I already know about Go: ___
   - What confused me in Tour of Go: ___
   - What I need to learn first: ___
@@ -151,6 +151,7 @@ mkdir 00-mini-projects
 cd 00-mini-projects
 git init
 ```
+- [x] Set up project folder
 
 ---
 
@@ -159,19 +160,19 @@ git init
 ### Read TGPL Chapter 1 (or Tour of Go Basics review)
 
 If you have TGPL:
-- [ ] Read Chapter 1: Tutorial
-- [ ] Type out (don't copy-paste) the examples
-- [ ] Run each example
-- [ ] Take notes in `notes/books/tgpl-chapter-1.md`
+- [x] Read Chapter 1: Tutorial
+- [x] Type out (don't copy-paste) the examples
+- [x] Run each example
+- [x] Take notes in `notes/books/tgpl-chapter-1.md`
 
 If you don't have TGPL yet:
-- [ ] Complete entire Tour of Go
-- [ ] Do all exercises
-- [ ] Take notes
+- [x] Complete entire Tour of Go
+- [x] Do all exercises
+- [x] Take notes
 
 ### Build Your First Tiny Program
-- [ ] Create file: `projects/phase-1/00-mini-projects/hello-world.go`
-- [ ] Write a program that:
+- [x] Create file: `projects/phase-1/00-mini-projects/hello-world.go`
+- [x] Write a program that:
   - Takes your name as input
   - Prints a greeting
   - Asks for your age
@@ -188,9 +189,9 @@ func main() {
 }
 ```
 
-- [ ] Run it: `go run hello-world.go`
-- [ ] Test with different inputs
-- [ ] Add comments explaining what each part does
+- [x] Run it: `go run hello-world.go`
+- [x] Test with different inputs
+- [x] Add comments explaining what each part does
 
 ---
 
@@ -201,18 +202,19 @@ func main() {
 cp journal/JOURNAL-TEMPLATE.md journal/2026-03-week-12.md
 ```
 
-- [ ] Open `journal/2026-03-week-12.md`
-- [ ] Fill in Days 1-5 (what you did so far)
-- [ ] Be specific about time spent each day
-- [ ] Note what you learned
-- [ ] Note what you struggled with
-- [ ] Note questions you have
+- [x] Copy template and fill it out
+- [x] Open `journal/2026-03-week-12.md`
+- [x] Fill in Days 1-5 (what you did so far)
+- [x] Be specific about time spent each day
+- [x] Note what you learned
+- [x] Note what you struggled with
+- [x] Note questions you have
 
 ### Update README.md
-- [ ] Open `README.md`
-- [ ] Update "This Week" section with your actual progress
-- [ ] Update time tracking
-- [ ] Check off completed goals
+- [x] Open `README.md`
+- [x] Update "This Week" section with your actual progress
+- [x] Update time tracking
+- [x] Check off completed goals
 
 ---
 
@@ -258,20 +260,20 @@ By end of Week 1, you should have:
 - [ ] Shared with accountability partner (if applicable)
 
 ### Learning
-- [ ] Completed baseline Go assessment (Tour of Go basics or TGPL Ch1)
-- [ ] Built 1-2 tiny programs
+- [x] Completed baseline Go assessment (Tour of Go basics or TGPL Ch1)
+- [x] Built 1-2 tiny programs
 - [ ] Created notes on what you learned
 - [ ] Identified what confused you
 
 ### Organization
-- [ ] First journal entry created
+- [x] First journal entry created
 - [ ] README.md updated with your status
 - [ ] Books status updated in resources/books.md
 - [ ] Week 2 planned
 
 ### Time
-- [ ] Logged approximately 10 hours
-- [ ] Tracked time for each day
+- [x] Logged approximately 10 hours
+- [x] Tracked time for each day
 - [ ] Identified best time slots for learning
 
 ---
