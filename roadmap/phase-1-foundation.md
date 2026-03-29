@@ -1,14 +1,14 @@
 # Phase 1: Software Development Foundation
 
-**Duration**: 12-18 months
-**Goal**: Be able to build production-grade services independently in Go
-**Time Commitment**: 10 hours/week (~500-750 hours total)
+**Duration**: 12 months
+**Goal**: Be able to build production-grade services independently in Go, with infrastructure awareness
+**Time Commitment**: 10 hours/week (~600 hours total)
 
 ---
 
 ## Overview
 
-You cannot architect systems you cannot build. This phase builds the fundamental software development skills required for any architect role.
+You cannot architect systems you cannot build. This phase builds the fundamental software development skills required for any architect role, with early introduction to infrastructure concepts that architects must understand.
 
 ---
 
@@ -18,7 +18,7 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 - [ ] Understand Go syntax, types, and control structures
 - [ ] Master goroutines, channels, and concurrency patterns
 - [ ] Write idiomatic Go code with proper error handling
-- [ ] Create comprehensive tests (unit, table-driven, benchmarks)
+- [ ] Create comprehensive tests (unit, table-driven tests, mocks, benchmarks)
 - [ ] Design clean package structures
 - [ ] Debug and profile Go applications
 
@@ -92,7 +92,7 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 **Requirements**:
 - Crawl websites concurrently
 - Follow links up to N levels deep
-- Rate limiting (max requests per second)
+- Rate limiting (configurable req/sec)
 - Respect robots.txt
 - Handle errors gracefully
 - Report statistics (pages crawled, errors, time taken)
@@ -142,7 +142,219 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 
 ---
 
-## Module 2: Database Design & SQL (2-3 months, ~100 hours)
+## Module 2: Infrastructure Fundamentals (2 months, ~80 hours)
+
+**Why Now**: Architects must understand deployment and operations. Don't learn this later when it's too late.
+
+### Learning Objectives
+- [ ] Understand containerization and OCI standards
+- [ ] Implement observability in applications (metrics, logs, traces)
+- [ ] Know networking basics for distributed systems
+- [ ] Compare REST vs gRPC for API design
+
+### Resources
+
+#### Containerization
+- [ ] Docker documentation and best practices
+- [ ] "Kubernetes in Action" (Chapter 1-3 for container basics)
+- [ ] OCI specifications
+
+#### Observability
+- [ ] OpenTelemetry documentation
+- [ ] Prometheus client libraries
+- [ ] Structured logging with slog/zap
+
+#### Networking & APIs
+- [ ] gRPC documentation and tutorials
+- [ ] TCP/IP basics for developers
+- [ ] Service discovery concepts
+
+### Projects
+
+#### Project 1: Containerize All Applications
+**Goal**: Learn Docker and container best practices
+
+**Requirements**:
+- Write production-grade Dockerfiles for all Phase 1 projects
+- Multi-stage builds for optimization
+- Security best practices (non-root user, minimal base images)
+- Build and push to container registry
+- Document container build process
+
+**Skills Practiced**:
+- Containerization
+- Image optimization
+- Security in containers
+- Registry operations
+
+**Status**: Not Started
+
+---
+
+#### Project 2: Add Observability
+**Goal**: Implement three pillars of observability
+
+**Requirements**:
+- Add structured logging to all projects (JSON format)
+- Implement Prometheus metrics collection
+- Add basic tracing with OpenTelemetry
+- Create health check endpoints
+- Document observability setup
+
+**Skills Practiced**:
+- Logging patterns
+- Metrics collection
+- Tracing basics
+- Health monitoring
+
+**Status**: Not Started
+
+---
+
+#### Project 3: gRPC Alternative Implementation
+**Goal**: Compare REST vs gRPC for API design
+
+**Requirements**:
+- Extend Todo API to support gRPC alongside REST
+- Define proto3 schemas
+- Implement gRPC server and client
+- Compare performance and developer experience
+- Document trade-offs and use cases
+
+**Skills Practiced**:
+- Protocol buffer design
+- gRPC implementation
+- API design comparison
+- Performance analysis
+
+**Status**: Not Started
+
+---
+
+#### Project 4: Networking Basics
+**Goal**: Understand network layer for distributed systems
+
+**Requirements**:
+- Implement service discovery in Todo API
+- Add load balancing concepts
+- Understand TCP connection handling
+- Document network architecture decisions
+
+**Skills Practiced**:
+- Service discovery
+- Load balancing
+- Network programming
+- Connection management
+
+**Status**: Not Started
+
+---
+
+### Success Criteria
+
+- [ ] All projects containerized with production Dockerfiles
+- [ ] Observability implemented (logs, metrics, traces)
+- [ ] gRPC API implemented and compared to REST
+- [ ] Networking concepts understood and documented
+- [ ] Minimum 80 hours logged
+
+---
+
+## Module 3: Database Design & SQL (2-3 months, ~100 hours)
+
+### Learning Objectives
+- [ ] Design normalized relational schemas
+- [ ] Write complex SQL queries with JOINs and aggregations
+- [ ] Optimize slow queries using indexes and EXPLAIN
+- [ ] Understand ACID properties and isolation levels
+- [ ] Handle database transactions properly
+
+### Resources
+
+#### Books
+- [ ] "SQL and Relational Theory" by C.J. Date
+- [ ] "Database System Concepts" (Chapter 6-8 for SQL)
+- [ ] PostgreSQL documentation
+
+#### Online Resources
+- [ ] SQLZoo - https://sqlzoo.net/
+- [ ] LeetCode SQL problems
+- [ ] PostgreSQL tutorial
+
+### Projects
+
+#### Project 1: Schema Design
+**Goal**: Learn database design and normalization
+
+**Requirements**:
+- Design e-commerce database schema (users, products, orders, inventory)
+- Apply proper normalization (3NF minimum)
+- Identify appropriate indexes
+- Write schema creation scripts
+- Document design decisions
+
+**Skills Practiced**:
+- Schema design
+- Normalization
+- Index selection
+- SQL DDL
+
+**Status**: Not Started
+
+---
+
+#### Project 2: Query Optimization
+**Goal**: Master SQL query writing and optimization
+
+**Requirements**:
+- Write complex queries (multiple JOINs, aggregations, window functions)
+- Analyze query performance with EXPLAIN
+- Optimize slow queries with indexes
+- Handle complex business logic in SQL
+- Document optimization results
+
+**Skills Practiced**:
+- Complex SQL
+- Query optimization
+- Index tuning
+- Performance analysis
+
+**Status**: Not Started
+
+---
+
+#### Project 3: Database Integration
+**Goal**: Integrate database with Go applications
+
+**Requirements**:
+- Refactor Todo API to use PostgreSQL instead of SQLite
+- Implement connection pooling
+- Add database migrations
+- Handle transactions properly
+- Add database-specific error handling
+
+**Skills Practiced**:
+- Database drivers
+- Connection management
+- Migrations
+- Transaction handling
+
+**Status**: Not Started
+
+---
+
+### Success Criteria
+
+- [ ] Can design normalized schemas for common domains
+- [ ] Can write complex SQL without googling basic syntax
+- [ ] Can optimize queries using EXPLAIN and indexes
+- [ ] Understand isolation levels and their trade-offs
+- [ ] All projects completed with proper database integration
+- [ ] Minimum 100 hours logged
+
+---
+
+## Module 5: APIs & Integration Patterns (2-3 months, ~100 hours)
 
 ### Learning Objectives
 - [ ] Design normalized database schemas
@@ -223,7 +435,7 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 
 ---
 
-## Module 3: APIs & Integration Patterns (2-3 months, ~100 hours)
+## Module 5: APIs & Integration Patterns (2-3 months, ~100 hours)
 
 ### Learning Objectives
 - [ ] Design clean REST APIs
@@ -297,7 +509,7 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 
 ---
 
-## Module 4: Distributed Systems Basics (3-4 months, ~150 hours)
+## Module 6: Distributed Systems Basics (2 months, ~120 hours)
 
 ### Learning Objectives
 - [ ] Understand CAP theorem and trade-offs
@@ -368,7 +580,7 @@ You cannot architect systems you cannot build. This phase builds the fundamental
 - [ ] Full observability (logs, metrics, traces)
 - [ ] Read DDIA chapters 1-9 completely
 - [ ] Can discuss trade-offs in distributed systems
-- [ ] Minimum 150 hours logged
+- [ ] Minimum 120 hours logged
 
 ---
 

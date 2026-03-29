@@ -1,7 +1,7 @@
 # Phase 1: Software Development Foundation - Detailed Modules
 
 **Duration**: 12 Months (exactly)  
-**Total Hours**: 500-600 hours at 10 hrs/week  
+**Total Hours**: 600 hours at 10 hrs/week  
 **Start**: March 21, 2026  
 **End**: March 21, 2027  
 
@@ -114,9 +114,66 @@ Next week focus:
 
 ---
 
-## Module 2: Database Design & SQL (2.5 months, 100 hours)
+## Module 2: Infrastructure Fundamentals (2 months, 80 hours)
 
-**Period**: Jun 21 - Sep 6, 2026  
+**Period**: Jun 21 - Aug 21, 2026  
+**Weekly Commitment**: 10 hours/week
+
+### Goals
+- Understand containerization and deployment
+- Implement observability in applications
+- Know networking basics for distributed systems
+- Compare API technologies (REST vs gRPC)
+
+### Submodule Breakdown
+
+#### 2.1: Containerization & Docker (4 weeks, 40 hours)
+- [ ] Docker fundamentals and OCI standards
+- [ ] Writing production Dockerfiles
+- [ ] Multi-stage builds and optimization
+- [ ] Security best practices
+- [ ] Container registries and deployment
+
+**Deliverable**: All Phase 1 projects containerized
+
+#### 2.2: Observability Implementation (3 weeks, 25 hours)
+- [ ] Structured logging (slog, zap)
+- [ ] Metrics collection (Prometheus client)
+- [ ] Tracing basics (OpenTelemetry)
+- [ ] Health checks and monitoring
+- [ ] Observability best practices
+
+**Deliverable**: Observability added to all projects
+
+#### 2.3: gRPC & API Design (2 weeks, 15 hours)
+- [ ] Protocol buffers and proto3
+- [ ] gRPC service definition
+- [ ] Streaming and error handling
+- [ ] REST vs gRPC comparison
+- [ ] When to use each
+
+**Deliverable**: gRPC implementation in Todo API
+
+#### 2.4: Networking Basics (1 week, 10 hours)
+- [ ] TCP/IP fundamentals for developers
+- [ ] Service discovery concepts
+- [ ] Load balancing basics
+- [ ] Connection handling
+
+**Deliverable**: Networking concepts documented
+
+### Success Criteria (ALL required ✅)
+- [ ] All projects containerized with production Dockerfiles
+- [ ] Observability implemented (logs, metrics, traces)
+- [ ] gRPC API implemented alongside REST
+- [ ] Networking concepts understood
+- [ ] **80 hours logged and documented**
+
+---
+
+## Module 4: Database Design & SQL (2.5 months, 100 hours)
+
+**Period**: Aug 21 - Nov 6, 2026  
 **Weekly Commitment**: 10 hours/week
 
 ### Goals
@@ -127,7 +184,7 @@ Next week focus:
 
 ### Submodule Breakdown
 
-#### 2.1: Database Fundamentals (2 weeks, 20 hours)
+#### 4.1: Database Fundamentals (2 weeks, 20 hours)
 - [ ] ACID properties
 - [ ] Relational algebra
 - [ ] Normalization (1NF, 2NF, 3NF, BCNF)
@@ -136,7 +193,7 @@ Next week focus:
 
 **Deliverable**: Design 3 schemas with proper normalization
 
-#### 2.2: SQL Query Deep Dive (3 weeks, 30 hours)
+#### 4.2: SQL Query Deep Dive (3 weeks, 30 hours)
 - [ ] Complex SELECT queries
 - [ ] JOINs (all types, performance implications)
 - [ ] Aggregation & GROUP BY
@@ -146,7 +203,7 @@ Next week focus:
 
 **Deliverable**: Solve 50+ SQL problems from SQL exercises
 
-#### 2.3: Indexes & Performance (2 weeks, 20 hours)
+#### 4.3: Indexes & Performance (2 weeks, 20 hours)
 - [ ] B-tree, Hash, GiST indexes
 - [ ] EXPLAIN output analysis
 - [ ] Query plan optimization
@@ -155,7 +212,7 @@ Next week focus:
 
 **Deliverable**: Optimize 10 slow queries, measure improvements
 
-#### 2.4: Transactions & Isolation (2 weeks, 15 hours)
+#### 4.4: Transactions & Isolation (2 weeks, 15 hours)
 - [ ] Isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable)
 - [ ] Phantom reads, dirty reads, non-repeatable reads
 - [ ] Deadlock analysis
@@ -163,7 +220,7 @@ Next week focus:
 
 **Deliverable**: Demonstrate each isolation level issue
 
-#### 2.5: Building Projects (3 weeks, 15 hours)
+#### 4.5: Building Projects (3 weeks, 15 hours)
 
 **Project 1: Schema Design**
 - E-commerce schema (users, products, orders, inventory)
@@ -194,9 +251,9 @@ Next week focus:
 
 ---
 
-## Module 3: APIs & Integration Patterns (2.5 months, 100 hours)
+## Module 5: APIs & Integration Patterns (2.5 months, 100 hours)
 
-**Period**: Sep 6 - Dec 6, 2026  
+**Period**: Nov 6, 2026 - Jan 21, 2027  
 **Weekly Commitment**: 10 hours/week
 
 ### Goals
@@ -207,7 +264,7 @@ Next week focus:
 
 ### Submodule Breakdown
 
-#### 3.1: REST API Design (3 weeks, 30 hours)
+#### 5.1: REST API Design (3 weeks, 30 hours)
 - [ ] REST principles (resources, verbs, status codes)
 - [ ] OpenAPI/Swagger specification
 - [ ] Pagination, filtering, sorting
@@ -217,7 +274,7 @@ Next week focus:
 
 **Deliverable**: Design REST API spec for multi-feature system
 
-#### 3.2: gRPC & Protocol Buffers (2 weeks, 20 hours)
+#### 5.2: gRPC & Protocol Buffers (2 weeks, 20 hours)
 - [ ] Protocol Buffers basics
 - [ ] Defining services and RPC methods
 - [ ] Streaming (client, server, bidirectional)
@@ -227,7 +284,7 @@ Next week focus:
 
 **Deliverable**: Convert REST API to gRPC, compare
 
-#### 3.3: Authentication & Authorization (2 weeks, 20 hours)
+#### 5.3: Authentication & Authorization (2 weeks, 20 hours)
 - [ ] JWT (JSON Web Tokens)
 - [ ] OAuth 2.0 fundamentals
 - [ ] API keys and secrets management
@@ -236,7 +293,7 @@ Next week focus:
 
 **Deliverable**: Implement JWT in a service
 
-#### 3.4: Advanced Patterns (2 weeks, 15 hours)
+#### 5.4: Advanced Patterns (2 weeks, 15 hours)
 - [ ] Rate limiting (token bucket, sliding window)
 - [ ] Request signing (AWS SigV4)
 - [ ] Idempotency
@@ -245,7 +302,7 @@ Next week focus:
 
 **Deliverable**: Design versioning strategy for evolving API
 
-#### 3.5: Building Projects (3 weeks, 15 hours)
+#### 5.5: Building Projects (3 weeks, 15 hours)
 
 **Project 1: Enhanced REST API**
 - Full REST design (resource-based, proper verbs)
@@ -279,9 +336,9 @@ Next week focus:
 
 ---
 
-## Module 4: Distributed Systems Basics (3 months, 150 hours)
+## Module 6: Distributed Systems Basics (2 months, 120 hours)
 
-**Period**: Dec 6, 2026 - Mar 21, 2027  
+**Period**: Jan 21 - Mar 21, 2027  
 **Weekly Commitment**: 10-12 hours/week
 
 ### Goals
@@ -291,7 +348,7 @@ Next week focus:
 
 ### Submodule Breakdown
 
-#### 4.1: Fundamentals (4 weeks, 40 hours)
+#### 6.1: Fundamentals (4 weeks, 40 hours)
 - [ ] Fallacies of Distributed Computing
 - [ ] Network partitions and failure modes
 - [ ] Consensus algorithms (Raft basics)
@@ -300,7 +357,7 @@ Next week focus:
 
 **Deliverable**: Implement a simple consensus algorithm
 
-#### 4.2: Databases & Consistency (3 weeks, 35 hours)
+#### 6.2: Databases & Consistency (3 weeks, 30 hours)
 - [ ] CAP theorem and replication strategies
 - [ ] Read replicas and eventual consistency
 - [ ] Multi-master replication
@@ -309,7 +366,7 @@ Next week focus:
 
 **Deliverable**: Design a sharded database system
 
-#### 4.3: Message Queues & Event Driven (3 weeks, 35 hours)
+#### 6.3: Message Queues & Event Driven (3 weeks, 30 hours)
 - [ ] Message brokers (Kafka, RabbitMQ)
 - [ ] Partition management
 - [ ] Consumer groups
@@ -318,7 +375,7 @@ Next week focus:
 
 **Deliverable**: Implement event-driven system
 
-#### 4.4: Monitoring & Observability (2 weeks, 20 hours)
+#### 6.4: Monitoring & Observability (2 weeks, 20 hours)
 - [ ] Health checks and heartbeats
 - [ ] Metrics collection
 - [ ] Distributed tracing
@@ -327,7 +384,7 @@ Next week focus:
 
 **Deliverable**: Instrument one of your projects fully
 
-#### 4.5: Building Projects (6 weeks, 20 hours distributed)
+#### 6.5: Building Projects (4 weeks, 20 hours distributed)
 
 **Project 1: Multi-Service System**
 - Multiple Go services
@@ -353,7 +410,7 @@ Next week focus:
 - [ ] Know consensus algorithm basics
 - [ ] Can design a sharded system
 - [ ] 3+ distributed projects completed
-- [ ] **150 hours logged and documented**
+- [ ] **120 hours logged and documented**
 
 ---
 
@@ -373,12 +430,13 @@ Next week focus:
 
 ### Documentation (ALL must be done ✅)
 - [ ] Module 1 Summary (Go lessons learned)
-- [ ] Module 2 Summary (Database lessons learned)
-- [ ] Module 3 Summary (API lessons learned)
-- [ ] Module 4 Summary (Distributed systems lessons learned)
+- [ ] Module 2 Summary (Infrastructure lessons learned)
+- [ ] Module 4 Summary (Database lessons learned)
+- [ ] Module 5 Summary (API lessons learned)
+- [ ] Module 6 Summary (Distributed systems lessons learned)
 
 ### Time Tracking (MUST be verified ✅)
-- [ ] 500+ hours logged in time tracking system
+- [ ] 600+ hours logged in time tracking system
 - [ ] All hours categorized by module
 - [ ] No more than 2 week gaps
 

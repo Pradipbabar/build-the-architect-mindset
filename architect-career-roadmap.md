@@ -14,7 +14,7 @@
 3. [What You're Missing (Technical Gaps)](#what-youre-missing-technical-gaps)
 4. [The Real Questions You Need to Answer](#the-real-questions-you-need-to-answer)
 5. [The Realistic Path Forward](#the-realistic-path-forward)
-6. [Phase 1: Software Development Foundation (12-18 months)](#phase-1-software-development-foundation-12-18-months)
+6. [Phase 1: Software Development Foundation (12 months)](#phase-1-software-development-foundation-12-months)
 7. [Phase 2: System Design & Architecture (12-18 months)](#phase-2-system-design--architecture-12-18-months)
 8. [Phase 3: Architecture Transition (12+ months)](#phase-3-architecture-transition-12-months)
 9. [Thinking Like a Principal Engineer](#thinking-like-a-principal-engineer)
@@ -222,9 +222,9 @@ This assumes:
 
 ---
 
-## Phase 1: Software Development Foundation (12-18 months)
+## Phase 1: Software Development Foundation (12 months)
 
-**Goal**: Be able to build production-grade services independently in Go.
+**Goal**: Be able to build production-grade services independently in Go, with infrastructure awareness.
 
 **Why this comes first**: You cannot architect systems you cannot build. This is non-negotiable.
 
@@ -261,7 +261,35 @@ Not "basic understanding." MASTER it.
 - Can review others' Go code and spot issues
 - Comfortable with goroutines, channels, and error handling
 
-#### 2. Database Design & SQL (2-3 months)
+#### 2. Infrastructure Fundamentals (2 months - INTEGRATED)
+
+**Why now**: Architects must understand deployment and operations. Don't learn this later when it's too late.
+
+**Core concepts**:
+- Containerization: Docker, OCI standards, multi-stage builds, security
+- Observability: structured logging, metrics, tracing, OpenTelemetry
+- Networking: TCP/IP, DNS, load balancing, service discovery
+- gRPC: protocol buffers, streaming, performance vs REST
+
+**Resources**:
+- [ ] Docker documentation and best practices
+- [ ] OpenTelemetry documentation
+- [ ] gRPC documentation and tutorials
+- [ ] "Kubernetes in Action" (Chapter 1-3 for container basics)
+
+**Practice projects** (add to existing Go projects):
+1. **Containerize all projects**: Write production Dockerfiles, build/push to registry
+2. **Add observability**: Implement structured logging, Prometheus metrics, basic tracing
+3. **gRPC alternative**: Extend REST API to support gRPC, compare trade-offs
+4. **Networking basics**: Implement service discovery, load balancing concepts
+
+**Success criteria**:
+- Can containerize any application
+- Understand observability pillars (metrics, logs, traces)
+- Can choose between REST and gRPC appropriately
+- Know basic networking concepts for distributed systems
+
+#### 3. Database Design & SQL (2-3 months)
 
 You can't design systems without understanding data.
 
@@ -289,7 +317,7 @@ You can't design systems without understanding data.
 - Understand when to use different index types
 - Know trade-offs between normalization and performance
 
-#### 3. APIs & Integration Patterns (2-3 months)
+#### 4. APIs & Integration Patterns (2-3 months)
 
 **Core concepts**:
 - REST: design principles, HTTP methods, status codes, versioning
@@ -314,7 +342,7 @@ You can't design systems without understanding data.
 - Can implement auth/authz
 - Know when to use different patterns
 
-#### 4. Distributed Systems Basics (3-4 months)
+#### 6. Distributed Systems Basics (2 months)
 
 **Core concepts**:
 - CAP theorem & trade-offs
@@ -342,8 +370,8 @@ You can't design systems without understanding data.
 
 ### Phase 1 Summary
 
-**Time**: 12-18 months
-**Commitment**: 10 hours/week
+**Time**: 12 months
+**Commitment**: 10 hours/week (~600 hours total)
 **Output**: 8-10 working projects in your GitHub
 
 **At the end of Phase 1, you should be able to**:
@@ -386,13 +414,13 @@ You can't design systems without understanding data.
 
 ---
 
-## Phase 2: System Design & Architecture (12-18 months)
+## Phase 2: System Design & Architecture (18 months)
 
-**Goal**: Understand architectural patterns, design systems end-to-end, and master cloud platforms.
+**Goal**: Master architectural patterns, cloud platforms, and infrastructure design for platform architect role.
 
 ### What to Learn
 
-#### 1. Architectural Patterns (3-4 months)
+#### 1. Architectural Patterns (3 months)
 
 **Core patterns**:
 - Monolith vs microservices (when to use each)
@@ -420,56 +448,289 @@ You can't design systems without understanding data.
 - Can diagram architectures clearly
 - Know when NOT to use fancy patterns
 
-#### 2. Platform & Infrastructure Architecture (4-6 months)
+#### 2. Infrastructure as Code & Environments (4 months)
 
-Since you want Platform Architect role, focus here.
+**Why critical**: IaC is how you make all infrastructure decisions happen at scale.
 
 **Core concepts**:
-- Platform thinking: internal developer platforms
-- Multi-tenancy patterns
-- Infrastructure as Code (deep, not surface level)
-- Service mesh (Istio/Linkerd)
-- Observability platforms
-- Security: zero trust, secrets management, least privilege
-- Cost optimization & FinOps
+- Advanced Terraform patterns (modules, workspaces, state management)
+- Multi-environment deployments (dev/staging/prod)
+- State locking and remote backends
+- Module composition and reusability
+- Policy as Code (OPA/Sentinel)
+- Testing infrastructure code
+- Cost estimation and optimization
 
 **Resources**:
-- [ ] Read: "Team Topologies" by Skelton & Pais — understand platform teams
-- [ ] Study: [CNCF Landscape](https://landscape.cncf.io/) — understand the ecosystem
-- [ ] Read: [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) — principles apply everywhere
-- [ ] Study: [Backstage docs](https://backstage.io/) — modern platform thinking
+- [ ] Read: "Terraform: Up & Running" by Yevgeniy Brikman
+- [ ] Study: Terraform documentation (modules, state, backends)
+- [ ] Learn: Open Policy Agent (OPA) for policy as code
 
 **Practice projects**:
-1. Design a multi-tenant platform architecture (draw diagrams, write docs)
-2. Build a simple internal developer platform (API + CLI + docs)
-3. Implement zero-trust security model for your services
-4. Set up full observability stack (Prometheus, Grafana, Loki, Tempo)
-5. Calculate and optimize cost for your infrastructure
-6. **Design cloud-native architectures using AWS/Azure/GCP services**
-
-**Cloud Platform Deep Dive**:
-- Master core services: compute (EC2/Lambda), storage (S3/EBS), networking (VPC/CloudFront), databases (RDS/DynamoDB)
-- Learn Infrastructure as Code (CloudFormation/Terraform)
-- Design for high availability, auto-scaling, and disaster recovery
-- Implement cost monitoring and optimization strategies
-- Understand managed services vs self-managed trade-offs
+1. Build multi-environment Terraform setup (dev/staging/prod)
+2. Create reusable modules for common infrastructure patterns
+3. Implement state management with locking
+4. Add policy as code for resource tagging and security
+5. Test infrastructure code with Terratest
+6. Implement cost estimation and alerting
 
 **Success criteria**:
-- Can design platform architecture for 50+ engineers
-- Understand multi-tenancy patterns deeply
-- Can make build vs buy decisions with justification
-- Know security best practices
-- Can design for cost efficiency
-- **Master cloud platform services and deployment patterns**
+- Can deploy complex infrastructure with Terraform
+- Understand state management completely
+- Can design IaC for multi-team organizations
+- Know when to use different IaC tools
 
-#### 3. System Design Practice (3-4 months)
+#### 3. Kubernetes Architecture (4 months)
 
-**Core skill**: Given requirements, design a system end-to-end.
+**Why critical**: Container orchestration is the foundation of modern infrastructure.
 
-**What to practice**:
-- Gathering requirements & constraints
-- Capacity estimation (back-of-envelope calculations)
-- High-level design
+**Core concepts**:
+- Kubernetes core architecture (API server, etcd, kubelet, scheduler)
+- Resource types (Pod, Deployment, Service, StatefulSet, DaemonSet)
+- Custom Resource Definitions (CRDs) and Operators
+- RBAC and Network Policies
+- Storage strategies (PersistentVolumes, StatefulSets)
+- GitOps workflows (ArgoCD, Flux)
+- Production patterns (HA, upgrades, security)
+
+**Resources**:
+- [ ] Read: "Kubernetes in Action" by Marko Lukša
+- [ ] Study: CKA Study Guide by Benjamin Muschko
+- [ ] Practice: Kubernetes the Hard Way (optional for deep understanding)
+
+**Practice projects**:
+1. Set up production-grade Kubernetes cluster (AWS EKS/Azure AKS/GKE)
+2. Deploy applications with proper RBAC and network policies
+3. Implement custom resources and operators
+4. Set up GitOps pipeline with ArgoCD
+5. Design storage strategy for stateful applications
+6. Implement security best practices
+
+**Success criteria**:
+- Can design Kubernetes for enterprise use
+- Understand all core resources deeply
+- Can implement RBAC and security properly
+- Know GitOps patterns and tools
+
+#### 4. CI/CD & Deployment Patterns (3 months)
+
+**Why critical**: Pipelines are critical for deployment safety and automation.
+
+**Core concepts**:
+- Pipeline architecture patterns
+- Testing in pipelines (unit, integration, security, E2E)
+- Artifact management and registries
+- Deployment safety patterns (canary, blue-green, feature flags)
+- GitOps workflows
+- Security scanning and compliance
+
+**Resources**:
+- [ ] Study: Pipeline documentation (GitLab CI, GitHub Actions, Jenkins)
+- [ ] Read: "Continuous Integration/Deployment" from DevOps Handbook
+- [ ] Learn: Deployment patterns and strategies
+
+**Practice projects**:
+1. Build multi-stage CI/CD pipeline with security scanning
+2. Implement canary and blue-green deployment strategies
+3. Set up artifact management and registries
+4. Create deployment safety mechanisms (feature flags, rollbacks)
+5. Implement comprehensive testing in pipeline
+6. Design GitOps deployment workflows
+
+**Success criteria**:
+- Can design enterprise CI/CD pipelines
+- Understand all stages and what belongs in each
+- Can implement deployment safety patterns
+- Know security and compliance in pipelines
+
+#### 5. Observability & Monitoring (3 months)
+
+**Why critical**: Production systems require deep visibility.
+
+**Core concepts**:
+- Three pillars: Metrics, Logs, Traces
+- Prometheus for metrics collection
+- ELK/Loki stack for log aggregation
+- Jaeger/Tempo for distributed tracing
+- SLI/SLO/SLA definitions and tracking
+- Alerting strategies and on-call practices
+
+**Resources**:
+- [ ] Read: "Observability Engineering" by Yuri Shkuro
+- [ ] Study: Prometheus, Grafana, ELK documentation
+- [ ] Learn: OpenTelemetry for instrumentation
+
+**Practice projects**:
+1. Deploy Prometheus and Grafana for metrics visualization
+2. Set up ELK or Loki for log aggregation and querying
+3. Implement distributed tracing with Jaeger
+4. Define SLIs/SLOs for your services
+5. Create alerting rules and dashboards
+6. Instrument applications with OpenTelemetry
+
+**Success criteria**:
+- Can design observability for enterprise systems
+- Understand all three pillars deeply
+- Can create effective dashboards and alerts
+- Can define SLOs realistically
+
+#### 6. Cloud Platform Deep Dive (4 months)
+
+**Choose one platform to master**: AWS, Azure, or GCP
+
+**Core services**:
+- Compute (EC2/VMs, Lambda/Functions, Containers/Kubernetes)
+- Storage (S3/Blob, Databases, CDN)
+- Networking (VPC, Load Balancers, DNS)
+- Monitoring (CloudWatch/Metrics, Logs)
+- Security (IAM, Encryption, Compliance)
+- Managed services and serverless
+
+**Resources**:
+- [ ] Official documentation and well-architected frameworks
+- [ ] Certification prep materials (Solutions Architect)
+- [ ] Hands-on labs and tutorials
+
+**Practice projects**:
+1. Deploy complete application on chosen cloud
+2. Design multi-region, highly available architecture
+3. Implement security best practices
+4. Set up monitoring and alerting
+5. Optimize costs and performance
+6. Design disaster recovery solutions
+
+**Success criteria**:
+- Can design cloud-native architectures
+- Understand managed services vs self-managed
+- Can make cloud service selection decisions
+- Know cost optimization patterns
+
+#### 7. SRE Fundamentals & Reliability (2 months)
+
+**Why critical**: SRE is how infrastructure engineers think about reliability.
+
+**Core concepts**:
+- Error budgets and SLO relationships
+- Monitoring and alerting (alert fatigue prevention)
+- On-call practices and schedules
+- Incident response procedures
+- Blameless postmortem culture
+- Chaos engineering basics
+
+**Resources**:
+- [ ] Read: Google SRE Book (free online)
+- [ ] Study: SRE Workbook by Google
+
+**Practice projects**:
+1. Define SLOs and error budgets for services
+2. Create incident response runbooks
+3. Set up on-call rotation and alerting
+4. Conduct postmortem for simulated incidents
+5. Implement chaos engineering experiments
+
+**Success criteria**:
+- Understand SRE philosophy and practices
+- Can define SLOs and error budgets
+- Know incident response procedures
+- Understand reliability engineering
+
+#### 8. Security & Compliance (3 months)
+
+**Why critical**: Security is non-negotiable in enterprise architecture.
+
+**Core concepts**:
+- Network security (VPC, firewalls, security groups)
+- Secrets management at scale
+- RBAC and IAM patterns
+- Zero trust architecture
+- Compliance frameworks (SOC2, HIPAA, PCI-DSS)
+- Encryption strategies
+
+**Resources**:
+- [ ] Study: Cloud security best practices
+- [ ] Learn: Compliance requirements
+- [ ] Read: Security architecture patterns
+
+**Practice projects**:
+1. Design network security architecture
+2. Implement secrets management system
+3. Create RBAC and IAM policies
+4. Design zero trust network
+5. Prepare compliance documentation
+6. Implement encryption strategies
+
+**Success criteria**:
+- Can design secure network architectures
+- Understand secrets management at scale
+- Know compliance requirements
+- Can implement zero trust principles
+
+#### 9. High Availability & Disaster Recovery (5 months)
+
+**Why critical**: Production systems must be resilient.
+
+**Core concepts**:
+- Multi-region failover strategies
+- Backup and recovery procedures
+- RTO and RPO calculations
+- Consistency models in distributed systems
+- Chaos engineering for resilience testing
+- Capacity planning and auto-scaling
+
+**Resources**:
+- [ ] Study: Disaster recovery patterns
+- [ ] Learn: Chaos engineering tools
+- [ ] Read: Reliability engineering books
+
+**Practice projects**:
+1. Design multi-region disaster recovery plan
+2. Implement backup and recovery procedures
+3. Calculate RTO/RPO for different services
+4. Set up chaos engineering experiments
+5. Design auto-scaling and capacity planning
+6. Test failover scenarios
+
+**Success criteria**:
+- Can design HA/DR for any system type
+- Understand RTO/RPO trade-offs
+- Know chaos engineering practices
+- Can implement resilience patterns
+
+#### 10. Capstone: Enterprise Platform Design (3 months)
+
+**Goal**: Integrate all Phase 2 learning into a comprehensive platform architecture.
+
+**Requirements**:
+1. Design complete enterprise platform using all learned patterns
+2. Include IaC, Kubernetes, CI/CD, observability, security
+3. Implement prototype with all components
+4. Document all architectural decisions
+5. Create operational runbooks
+
+**Deliverable**: Complete platform architecture with working prototype
+
+**Success criteria**:
+- Demonstrates mastery of all Phase 2 concepts
+- Can design end-to-end enterprise platforms
+- Understands integration of all infrastructure components
+- Ready for Phase 3 application
+
+### Phase 2 Success Criteria (ALL required)
+
+- [ ] Completed all architectural pattern implementations
+- [ ] Mastered Infrastructure as Code (Terraform advanced patterns)
+- [ ] Can design production Kubernetes clusters
+- [ ] Can architect enterprise CI/CD pipelines
+- [ ] Can design complete observability platforms
+- [ ] Mastered one cloud platform deeply
+- [ ] Understand SRE principles and practices
+- [ ] Can design secure, compliant systems
+- [ ] Can architect HA/DR solutions
+- [ ] Completed capstone platform project
+- [ ] **650+ hours logged and documented**
+- [ ] **At least 2 cloud certifications earned**
+- [ ] **Code reviewed by senior engineers**
+- [ ] **Can make independent architectural decisions**
 - Deep dive into components
 - Trade-off analysis
 - Scalability & reliability patterns
@@ -611,82 +872,149 @@ You said you're interested in this, so now's the time.
 
 ---
 
-## Phase 3: Architecture Transition (12+ months)
+## Phase 3: Principal Engineer Transition (12 months)
 
-**Goal**: Start doing architecture work and transition your role.
+**Goal**: Apply skills at work, build reputation, and transition to Principal Engineer role.
 
-### What to Do
+### Track A: Platform Architect Path (6+ months)
 
-#### 1. At Your Current Job (Critical)
+**Focus**: Deep specialization in platform engineering and infrastructure architecture.
 
-**Start behaving like an architect before you have the title**:
+#### Months 1-2: Platform Design & Documentation
+- Design internal developer platforms (IDP) for your organization
+- Document current platform architecture and pain points
+- Create platform vision and roadmap
+- Identify developer experience (DX) improvement opportunities
 
-**Months 1-3: Observe & Document**
-- Document the architecture of systems you work on
-- Create architecture diagrams for your team's services
-- Write ADRs (Architecture Decision Records) for decisions your team makes
-- Ask "why" questions in every design discussion
+#### Months 3-4: Platform Implementation
+- Build self-service infrastructure capabilities
+- Implement platform APIs and CLIs
+- Create platform governance and policies
+- Measure developer productivity improvements
 
-**Months 4-6: Small Design Decisions**
-- Volunteer to design small features end-to-end
-- Write design docs for your proposed solutions
-- Present designs to your team
-- Incorporate feedback and iterate
+#### Months 5-6: Platform Leadership
+- Lead platform evolution and adoption
+- Mentor platform engineering practices
+- Define platform standards and patterns
+- Build community around platform usage
 
-**Months 7-9: Larger Scope**
-- Propose architecture improvements for existing systems
+**Deliverables**:
+- Live platform improvements at work
+- Platform architecture documentation
+- Developer feedback and metrics
+- Platform operations runbooks
+
+### Track B: Professional & Leadership Skills (12 months)
+
+**Focus**: Communication, leadership, and business acumen.
+
+#### Technical Communication & Writing
+- Write RFCs and design documents
+- Create technical presentations
+- Start technical blog (12+ posts)
+- Document architectural decisions
+
+#### Leadership & Team Management
+- Mentor junior engineers
+- Lead cross-team initiatives
+- Facilitate architecture discussions
+- Build consensus across teams
+
+#### Business Acumen
+- Understand business impact of technical decisions
+- Learn cost-benefit analysis
+- Connect technical work to business outcomes
+- Present to executive stakeholders
+
+**Deliverables**:
+- 12+ blog posts published
+- 5+ RFCs/design documents
+- 3+ presentations given
+- Mentorship of 2+ engineers
+
+### Track C: On-the-Job Application (12 months)
+
+**Focus**: Apply skills at work and build reputation.
+
+#### Months 1-3: Observe & Document
+- Document architecture of current systems
+- Create architecture diagrams
+- Write ADRs for team decisions
+- Ask "why" in design discussions
+
+#### Months 4-6: Small Design Ownership
+- Own end-to-end design of small features
+- Write design docs and get approval
+- Implement and validate solutions
+- Learn from feedback and iteration
+
+#### Months 7-9: Technical Leadership
 - Lead technical discussions
-- Review others' designs and give feedback
+- Review others' designs
+- Propose architecture improvements
 - Mentor junior engineers
 
-**Months 10-12: Cross-team Impact**
-- Design solutions that span multiple teams
-- Collaborate with other architects
+#### Months 10-12: Cross-Team Impact
+- Design solutions spanning multiple teams
+- Collaborate with architects
 - Present to senior leadership
-- Build your reputation as technical leader
+- Build reputation as technical leader
 
-**Key skills to practice**:
-- Writing clear design docs
-- Creating understandable diagrams
-- Presenting technical concepts to non-technical stakeholders
-- Facilitating technical discussions
-- Building consensus
-- Making decisions with incomplete information
+**Deliverables**:
+- 3+ architecture diagrams
+- 5+ ADRs written
+- 2+ cross-team designs
+- Leadership recognition
 
-#### 2. Build Your Portfolio
+### Track D: Public Portfolio & Networking (12 months)
 
-**Create a public portfolio** showing:
-- System designs you've done (anonymize if needed)
-- Architecture documents
-- Technical blog posts explaining your decisions
-- Open source contributions
-- Speaking at meetups/conferences
+**Focus**: Build external reputation and network.
 
-**Why**: When you interview for architect roles, this proves you can do the job.
+#### Portfolio Development
+- Case studies of systems designed
+- Architecture analysis of open source projects
+- Technical blog posts (12+)
+- Speaking engagements (3+)
 
-#### 3. Learn the Business Side
+#### Networking & Learning
+- Join architecture communities
+- Find architect mentor
+- Attend conferences/meetups
+- Study industry postmortems
 
-**Architects must understand business context**:
-- Learn about your company's business model
-- Understand cost implications of technical decisions
-- Connect technical work to business outcomes
-- Learn to speak the language of product and business
+#### Open Source Contributions
+- Contribute to infrastructure projects
+- Create platform-related tools
+- Document architecture patterns
+- Build community around work
 
-#### 4. Network & Learn from Others
+**Deliverables**:
+- 5+ case studies published
+- 12+ blog posts
+- 3+ presentations
+- Meaningful open source contributions
 
-- Find an architect mentor (inside or outside your company)
-- Join architecture communities (Software Architecture Discord, architecture meetups)
-- Review open source projects' architecture
-- Read postmortems from other companies
-- Study how big tech companies solve problems (engineering blogs)
+### Phase 3 Success Criteria
 
-#### 5. Communication & Documentation Skills
+- [ ] Applied Phase 2 skills at work successfully
+- [ ] Built reputation as technical leader
+- [ ] Created comprehensive portfolio
+- [ ] Demonstrated business impact
+- [ ] Ready for Principal Engineer interviews
+- [ ] **400+ hours logged**
+- [ ] **Principal Engineer offer OR interview-ready**
 
-**This is 70% of the architect job**:
-- Practice writing: start a technical blog
-- Practice speaking: present at team meetings, then meetups
-- Learn diagramming: C4 model, UML basics
-- Study good documentation: read RFCs, design docs from big companies
+### Timeline & Milestones
+
+| Month | Focus | Key Deliverable |
+|-------|-------|-----------------|
+| 1-2 | Platform design & documentation | Platform architecture docs |
+| 3-4 | Implementation & self-service | Working platform capabilities |
+| 5-6 | Leadership & adoption | Platform metrics & adoption |
+| 7-9 | Cross-team impact | Multi-team solutions |
+| 10-12 | Executive communication | Business impact presentations |
+
+**Total Timeline**: 12 months to Principal Engineer readiness
 - Get feedback on your communication constantly
 
 ### Principal Engineer Extensions - Phase 3
