@@ -1,427 +1,573 @@
-# TGPL Chapters 2–3 — Program Structure & Data Types
+Absolutely—here are **clear, complete, and structured notes** for:
+# 📘 Chapter 2: Program Structure (Detailed Notes)
+
+This chapter explains **how Go programs are organized**, including variables, types, packages, and scope.
+---
+
+# 🔹 2.1 Names
+
+## ✅ Rules for Identifiers
+
+* Must start with:
+
+  * letter (a–z, A–Z)
+  * underscore `_`
+* Can include digits after first character
 
 ---
 
-## Chapter 2: Program Structure
+## 🔹 Exported vs Unexported
 
-### 2.1 Names
-
-* In Go, **names (identifiers)** are used for variables, functions, types, constants, and packages.
-
-* A name must start with a letter or underscore (`_`), followed by letters, digits, or underscores.
-
-* Go is **case-sensitive**, so `count` and `Count` are different.
-
-* **Export rule (very important):**
-
-  * Names starting with **uppercase** → exported (visible outside package)
-  * Names starting with **lowercase** → unexported (package-private)
-
-* Special names:
-
-  * `_` (blank identifier): used to ignore values
-
-**Key idea:** Names are simple but crucial because Go uses **capitalization for visibility instead of keywords like public/private.**
-
----
-
-### 2.2 Declarations
-
-* A **declaration** introduces a name and specifies its type and sometimes its value.
-
-* There are 4 main kinds:
-
-  * `var` → variables
-  * `const` → constants
-  * `type` → types
-  * `func` → functions
-
-Example:
+* Capitalized → **Exported (public)**
 
 ```go
-var x int
-const Pi = 3.14
-type Age int
-func add(a int, b int) int { return a + b }
+fmt.Println()
 ```
 
-**Key idea:** Declarations define the **structure of a program before execution begins.**
+* Lowercase → **Unexported (private)**
 
 ---
 
-### 2.3 Variables
+## 🔹 Naming Conventions
 
-* A **variable** stores a value of a specific type.
+* camelCase preferred
+* Short names for small scopes (`i`, `x`)
+* Descriptive names for larger scopes
 
-#### Ways to declare:
+---
 
-1. Explicit type:
+# 🔹 2.2 Declarations
+
+## ✅ Types of Declarations
+
+* `var` → variables
+* `const` → constants
+* `type` → type definitions
+* `func` → functions
+
+---
+
+## 🔹 Example
+
+```go
+var age int
+const Pi = 3.14
+type myInt int
+```
+
+---
+
+# 🔹 2.3 Variables
+
+## ✅ Declaration
+
+```go
+var name string
+```
+
+---
+
+## 🔹 Initialization
 
 ```go
 var x int = 10
+var y = 20
 ```
 
-2. Type inference:
+---
+
+## 🔹 Short Declaration
 
 ```go
-var x = 10
+z := 30
 ```
 
-3. Short declaration (inside functions only):
+* Only inside functions
 
-```go
-x := 10
-```
+---
 
-* **Zero value concept (important in Go):**
+## 🔹 Zero Values
 
-  * If not initialized, variables get default values:
+Default values when not initialized:
 
-    * `int → 0`
-    * `float → 0.0`
-    * `bool → false`
-    * `string → ""`
+| Type   | Zero Value |
+| ------ | ---------- |
+| int    | 0          |
+| string | ""         |
+| bool   | false      |
 
-* Multiple variables:
+---
+
+## 🔹 Multiple Variables
 
 ```go
 var a, b, c int
 ```
 
-**Key idea:** Go avoids uninitialized garbage values — everything has a predictable default.
+---
+
+# 🔹 2.4 Assignments
+
+## ✅ Basic Assignment
+
+```go
+x = 10
+```
 
 ---
 
-### 2.4 Assignments
-
-* Assignment updates the value of a variable.
+## 🔹 Multiple Assignment
 
 ```go
-x = 5
+a, b = b, a
 ```
 
-* Multiple assignment:
+---
+
+## 🔹 Compound Assignment
 
 ```go
-a, b = b, a   // swap
+x += 5
+x *= 2
 ```
 
-* Assignment is **value-based**:
+---
 
-  * Copies the value (except for reference-like types such as slices, maps, pointers)
-
-* Compound assignment:
-
-```go
-x += 2
-```
-
-* Increment/Decrement:
+## 🔹 Increment/Decrement
 
 ```go
 x++
 x--
 ```
 
-(Note: these are statements, not expressions)
-
-**Key idea:** Assignment in Go is simple and explicit, with no hidden conversions.
-
 ---
 
-### 2.5 Type Declarations
+# 🔹 2.5 Type Declarations
 
-* You can define **new named types**:
+## ✅ Defining New Types
 
 ```go
 type Celsius float64
-type Fahrenheit float64
 ```
-
-* Even if underlying type is same, they are **distinct types**:
-
-```go
-var c Celsius = 10
-var f Fahrenheit = 10
-```
-
-* Requires explicit conversion:
-
-```go
-f = Fahrenheit(c)
-```
-
-**Why important?**
-
-* Improves **type safety**
-* Prevents mixing logically different values
-
-**Key idea:** Type declarations create **stronger abstractions**, not just aliases.
 
 ---
 
-### 2.6 Packages and Files
+## 🔹 Type Conversion
 
-* A **package** is a collection of Go files in the same directory.
+```go
+var c Celsius = 100
+var f float64 = float64(c)
+```
 
-* Each file starts with:
+---
+
+## 🔹 Why Use Custom Types?
+
+* Improves readability
+* Adds type safety
+
+---
+
+# 🔹 2.6 Packages and Files
+
+## ✅ Package Concept
+
+* Go programs organized into packages
 
 ```go
 package main
 ```
 
-* Rules:
+---
 
-  * All files in a directory → same package
-  * One special package: `main` (entry point)
-
-* Importing packages:
+## 🔹 Importing Packages
 
 ```go
 import "fmt"
 ```
 
-* Package structure enables:
+---
 
-  * Code reuse
-  * Modularity
-  * Encapsulation
+## 🔹 Multiple Imports
 
-**Key idea:** Packages are the **core unit of modularity in Go.**
+```go
+import (
+    "fmt"
+    "math"
+)
+```
 
 ---
 
-### 2.7 Scope
+## 🔹 Package Initialization
 
-* **Scope** determines where a name is accessible.
+* Files initialized in dependency order
+* Then `main()` runs
 
-Types of scope:
+---
 
-1. **Local scope** → inside functions
-2. **Package scope** → declared outside functions
-3. **File scope** → imports and top-level declarations
-4. **Block scope** → inside `{}`
+# 🔹 2.7 Scope
 
-* Inner scopes can **shadow** outer variables:
+## ✅ Definition
+
+Scope = where a variable is accessible
+
+---
+
+## 🔹 Types of Scope
+
+* Local (inside function)
+* Package-level
+* Block-level
+
+---
+
+## 🔹 Example
+
+```go
+var global int
+
+func main() {
+    var local int
+}
+```
+
+---
+
+## 🔹 Shadowing
+
+Inner variable hides outer variable
 
 ```go
 x := 10
 if true {
-    x := 20  // different x
+    x := 20
 }
 ```
 
-**Key idea:** Scope controls **visibility and lifetime of names**, preventing conflicts.
+---
+
+# 🔹 2.8 Printing
+
+## ✅ Basic Printing
+
+```go
+fmt.Println("Hello")
+```
 
 ---
 
-# Chapter 3: Basic Data Types
+## 🔹 Formatted Printing
+
+```go
+fmt.Printf("Value: %d", x)
+```
 
 ---
 
-### 3.1 Integers
+## 🔹 Format Specifiers
 
-* Integer types:
+| Specifier | Meaning |
+| --------- | ------- |
+| %d        | integer |
+| %f        | float   |
+| %s        | string  |
+| %v        | default |
 
-  * Signed: `int8, int16, int32, int64`
-  * Unsigned: `uint8, uint16, uint32, uint64`
-  * Platform-dependent: `int`, `uint`
+---
 
-* Special:
+# 🔥 Chapter 2 Summary
 
-  * `byte` = `uint8`
-  * `rune` = `int32` (Unicode code point)
+* Variables and constants define data
+* Packages organize code
+* Scope controls visibility
+* Type system ensures safety
 
-* Supports:
+---
 
-  * Arithmetic: `+ - * /`
-  * Bitwise: `& | ^ << >>`
+# 📘 Chapter 3: Basic Data Types (Detailed Notes)
 
-Example:
+This chapter explains **Go’s built-in data types and operations**.
+
+---
+
+# 🔹 3.1 Integers
+
+## ✅ Types
+
+* Signed: `int`, `int8`, `int16`, `int32`, `int64`
+* Unsigned: `uint`, `uint8`, etc.
+
+---
+
+## 🔹 Example
 
 ```go
 var x int = 10
-var y uint = 20
 ```
-
-**Key idea:** Go enforces **explicit type conversions**, avoiding implicit mixing.
 
 ---
 
-### 3.2 Floating-Point Numbers
-
-* Types:
-
-  * `float32`
-  * `float64` (default)
-
-* Based on IEEE 754 standard
-
-Example:
+## 🔹 Operations
 
 ```go
-var pi float64 = 3.14159
++  -  *  /  %
 ```
-
-* Scientific notation:
-
-```go
-1.23e4
-```
-
-**Key idea:** Floating-point values are approximate, not exact.
 
 ---
 
-### 3.3 Complex Numbers
-
-* Types:
-
-  * `complex64`
-  * `complex128`
-
-Example:
+## 🔹 Bitwise Operations
 
 ```go
-z := complex(2, 3)  // 2 + 3i
+&  |  ^  <<  >>
 ```
-
-* Real and imaginary parts:
-
-```go
-real(z)
-imag(z)
-```
-
-**Key idea:** Built-in support makes Go useful for scientific/math computations.
 
 ---
 
-### 3.4 Booleans
+## 🔹 Overflow
 
-* Type: `bool`
-* Values:
-
-  * `true`
-  * `false`
-
-Example:
-
-```go
-var flag bool = true
-```
-
-* Used in conditions:
-
-```go
-if flag {
-    // do something
-}
-```
-
-**Key idea:** No implicit conversion (e.g., 0 ≠ false)
+* Fixed-size integers can overflow
 
 ---
 
-### 3.5 Strings
+# 🔹 3.2 Floating-Point Numbers
 
-* Immutable sequence of bytes
+## ✅ Types
 
-Example:
+* `float32`
+* `float64`
+
+---
+
+## 🔹 Example
+
+```go
+var pi float64 = 3.14
+```
+
+---
+
+## 🔹 Scientific Notation
+
+```go
+1e6  // 1000000
+```
+
+---
+
+# 🔹 3.3 Complex Numbers
+
+## ✅ Types
+
+* `complex64`
+* `complex128`
+
+---
+
+## 🔹 Example
+
+```go
+c := complex(1, 2)
+```
+
+---
+
+## 🔹 Access Parts
+
+```go
+real(c)
+imag(c)
+```
+
+---
+
+# 🔹 3.4 Booleans
+
+## ✅ Values
+
+```go
+true
+false
+```
+
+---
+
+## 🔹 Example
+
+```go
+var isValid bool = true
+```
+
+---
+
+## 🔹 Operators
+
+```go
+&&  ||  !
+```
+
+---
+
+# 🔹 3.5 Strings
+
+## ✅ Definition
+
+Immutable sequence of bytes
+
+---
+
+## 🔹 Example
 
 ```go
 s := "hello"
 ```
 
-* Operations:
+---
 
-  * Concatenation:
+## 🔹 String Operations
 
-    ```go
-    s = s + " world"
-    ```
-  * Length:
-
-    ```go
-    len(s)
-    ```
-
-* UTF-8 encoded
-
-* Indexing gives **bytes**, not characters
-
-**Key idea:** Strings are immutable and UTF-8 aware, but byte-based internally.
+```go
+len(s)
+s[0]
+```
 
 ---
 
-### 3.6 Constants
+## 🔹 String Concatenation
 
-* Declared using `const`
+```go
+"hello" + "world"
+```
+
+---
+
+## 🔹 Raw Strings
+
+```go
+`multi-line string`
+```
+
+---
+
+# 🔹 3.6 Constants
+
+## ✅ Declaration
 
 ```go
 const Pi = 3.14
 ```
 
+---
+
+## 🔹 Constant Rules
+
 * Must be known at compile time
-
-* Can be **untyped constants**:
-
-```go
-const x = 10
-```
-
-* Typed constants:
-
-```go
-const y int = 10
-```
-
-* `iota` (important concept):
-
-```go
-const (
-    A = iota
-    B
-    C
-)
-```
-
-Values:
-
-```
-A = 0
-B = 1
-C = 2
-```
-
-**Key idea:** Constants improve **safety and clarity**, and `iota` helps generate sequences.
+* Cannot be changed
 
 ---
 
-## Examples I Typed
+## 🔹 iota (Auto Increment)
 
 ```go
-package main
+const (
+    a = iota
+    b
+    c
+)
+```
 
-import "fmt"
+---
 
-func main() {
-    var x int = 10
-    y := 20
+# 🔹 3.7 Type Conversions
 
-    const Pi = 3.14
+## ✅ Explicit Conversion
 
-    z := complex(2, 3)
+```go
+x := int(3.14)
+```
 
-    fmt.Println(x, y, Pi, z)
+---
+
+## 🔹 No Implicit Conversion
+
+* Must convert manually
+
+---
+
+# 🔹 3.8 Packages (math, etc.)
+
+## ✅ Example
+
+```go
+import "math"
+math.Sqrt(16)
+```
+
+---
+
+# 🔹 3.9 Unicode
+
+## ✅ Rune Type
+
+* Represents Unicode character
+
+```go
+var r rune = 'A'
+```
+
+---
+
+## 🔹 UTF-8 Encoding
+
+* Go strings are UTF-8 encoded
+
+---
+
+# 🔹 3.10 Bytes, Runes, Strings
+
+## 🔹 Byte
+
+* Alias for `uint8`
+
+## 🔹 Rune
+
+* Alias for `int32`
+
+---
+
+## 🔹 Example
+
+```go
+for i, r := range "Hello" {
+    fmt.Println(i, r)
 }
 ```
 
-```go
-type Celsius float64
+---
 
-func main() {
-    var c Celsius = 25
-    fmt.Println(c)
-}
-```
+# 🔥 Chapter 3 Summary
+
+| Type    | Description     |
+| ------- | --------------- |
+| int     | integers        |
+| float   | decimals        |
+| complex | complex numbers |
+| bool    | true/false      |
+| string  | text            |
+
+---
+
+# 🧠 Key Takeaways
+
+### Chapter 2:
+
+* Structure of Go programs
+* Variables, scope, and packages are essential
+
+### Chapter 3:
+
+* Strong typing system
+* No implicit conversions
+* Strings are immutable
+* Unicode support is built-in
+
