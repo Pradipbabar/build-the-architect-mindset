@@ -1,93 +1,78 @@
 # Phase 1: Software Development Foundation - Detailed Modules
 
-**Duration**: 12 Months (exactly)  
-**Total Hours**: 600 hours at 10 hrs/week  
+**Duration**: 12+ Months (flexible based on time availability)  
+**Total Hours**: ~400+ hours at realistic weekly commitment  
 **Start**: March 21, 2026  
-**End**: March 21, 2027  
+**End**: Open-ended (prioritize depth over speed)
 
 ---
 
-## Module 1: Go Fundamentals (4 months, 200 hours)
+## ⚠️ REALISTIC NOTE FOR BUSY PROFESSIONALS
 
-**Period**: Mar 21 - Jun 21, 2026  
-**Weekly Commitment**: 12-15 hours/week (higher concentration)
+This roadmap is designed for people with **full-time work commitments**. Rather than the original aggressive timeline (12-15 hrs/week), we focus on **sustainable learning** at 5-7 hours per week. Quality always beats quantity.
+
+---
+
+## Module 1: Go Fundamentals (3-4 months, 60-80 hours)
+
+**Period**: Mar 21 - Jun 21, 2026 (12 weeks)  
+**Weekly Commitment**: 5-7 hours/week (sustainable with full-time work)  
+**Realistic Distribution**: 
+- Weekdays: 1-1.5 hours (evening study) = 5-7.5 hours
+- Weekends: 1-2 hours (if desired)
+- **OR** just weekends: 5-7 hours Saturday/Sunday
 
 ### Goals
-- Build production-grade Go applications
-- Master concurrency (goroutines, channels, sync)
-- Write idiomatic, maintainable code
-- Comprehensive testing skills
+- Build solid Go fundamentals (not production-grade yet)
+- Understand concurrency concepts (goroutines, channels, basics)
+- Write clean, testable code
+- Complete core TGPL + practical projects
 
 ### Submodule Breakdown
 
-#### 1.1: Go Basics (3 weeks, 50 hours)
-- [ ] The Go Programming Language Book - Chapters 1-6
-- [ ] Go syntax, types, functions
+#### 1.1: Go Basics & Syntax (4 weeks, 20-24 hours)
+- [ ] The Go Programming Language Book - Chapters 1-4
+- [ ] Go syntax, types, pointers
 - [ ] Error handling patterns
-- [ ] Package design
-- [ ] Testing basics
+- [ ] Testing basics (table-driven tests)
+- [ ] 2-3 small Gophercises (#1, #2, optionally #3)
 
-**Deliverable**: Quiz yourself on all syntax
+**Deliverable**: Chapters 1-4 notes + 2-3 Gophercises with tests
 
-#### 1.2: Concurrency Mastery (4 weeks, 60 hours)
-- [ ] TGPL Chapters 7-9 (focus on concurrency)
-- [ ] Goroutines deep dive
-- [ ] Channels (buffered, unbuffered, select)
-- [ ] Sync primitives (WaitGroup, Mutex, Once)
-- [ ] Context for cancellation
-- [ ] Common pitfalls & deadlocks
+#### 1.2: Functions, Methods & Interfaces (3 weeks, 15-18 hours)
+- [ ] TGPL Chapters 5-6 (functions, methods, interfaces)
+- [ ] Function design in Go
+- [ ] Method receivers (value vs pointer)
+- [ ] Interface concepts
+- [ ] 1 small project: Simple CLI or text processor
 
-**Deliverable**: Mini concurrency exercises (at least 5)
+**Deliverable**: Chapters 5-6 notes + 1 working project on GitHub
 
-#### 1.3: Testing & Best Practices (3 weeks, 50 hours)
-- [ ] Testing patterns (unit, integration, benchmarks)
-- [ ] Table-driven tests
-- [ ] Mocking strategies
-- [ ] Test coverage analysis
-- [ ] Code organization
+#### 1.3: Concurrency Foundations (3 weeks, 15-18 hours)
+- [ ] TGPL Chapters 7-9 (concurrency, packages, testing)
+- [ ] Goroutines basics
+- [ ] Channels (unbuffered, buffered)
+- [ ] Select statement
+- [ ] 1 more small project: Concurrent program or enhanced CLI
 
-**Deliverable**: Test 1 project to >80% coverage
+**Deliverable**: Chapters 7-9 notes + 1 concurrent project on GitHub
 
-#### 1.4: Build 3 Projects (8 weeks, 40 hours distributed)
-Complete these in sequence:
+#### 1.4: Code Quality & Review (2 weeks, 10-12 hours)
+- [ ] Code quality practices (gofmt, go vet, test coverage)
+- [ ] Idioms and best practices
+- [ ] Code review of your own projects
+- [ ] Self-assessment on fundamentals
 
-**Project 1: Log Parser CLI** (2 weeks, 12 hours)
-- Read log files, filter by pattern (regex)
-- Output statistics (JSON, CSV, plaintext)
-- Handle large files efficiently
-- No databases, focus on I/O and CLI design
+**Deliverable**: All projects pass quality checks, GitHub ready
 
-**Deliverable**: Working CLI, >80% test coverage, GitHub repo
-
-**Project 2: Todo REST API** (3 weeks, 18 hours)
-- REST CRUD endpoints
-- SQLite persistence
-- Proper HTTP status codes
-- Input validation
-- API key authentication
-- Unit + integration tests
-
-**Deliverable**: Completed API, >80% test coverage, GitHub repo
-
-**Project 3: Web Crawler** (3 weeks, 18 hours)
-- Crawl websites concurrently
-- Follow links recursively
-- Rate limiting (configurable req/sec)
-- Respect robots.txt
-- Stats reporting (concurrent, handled gracefully)
-- Real concurrency tests
-
-**Deliverable**: Working crawler, production-ready, GitHub repo
-
-### Success Criteria (ALL required ✅)
-- [ ] Completed TGPL book with all exercises
-- [ ] Completed 20+ Gophercises
-- [ ] 3 projects on GitHub with >80% test coverage
-- [ ] Can explain goroutines, channels, and select
-- [ ] Can write idiomatic Go code
-- [ ] Code review approved by senior Go dev
-- [ ] **200 hours logged and documented**
-- [ ] **At least 1 project got external code review**
+### Success Criteria (REALISTIC ✅)
+- [x] Completed TGPL Chapters 1-9 with typed notes
+- [x] Completed 2-3 Gophercises (#1, #2, optionally #3)
+- [x] Built 2 projects on GitHub with >60% test coverage
+- [x] Can explain goroutines, channels, select clearly
+- [x] Can write clean, idiomatic Go code
+- [x] **60-80 hours logged and documented**
+- [x] Code passes gofmt, go vet, go test standards
 
 ### Time Tracking Template
 ```
